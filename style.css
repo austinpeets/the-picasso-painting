@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* use viewport height for full screen */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(185, 185, 114);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 0;
+    
+}
+
+.images {
+    flex: 1 1 auto; /* grow, shrink and set to initial size */
+    max-width: 70%; /* set a maximum width for the image */
+    margin: 10px; 
+}
+
+img {
+    width: 100%; /* make the image fill the container horizontally */
+    height: auto; /* maintain aspect ratio */
+}
+
+.forms {
+    flex: 0 1 100%; /* set to inital size, don't grow or shrink, take full width */
+    width: 100%; /* Adjust the max width as needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+form {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   z-index: 1;
+
+}
+
+label, input {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for specific Screen Sizes */
+
+/* Mobile 480 x 320 */
+
+@media only screen and (min-width: 480px) and (min-height: 320px) {
+    .flex-container {
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: center; /* center items vertically for mobile */
+    }
+
+    .images, .forms {
+        max-width: 90%; /*adjust the width for smaller screens */
+    }
+}
+
+/* Ipad 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (min-height: 768px) {
+    .flex-container {
+        flex-direction: column; /* stack items vertically for iPad */
+        align-items: center; /* center items vertically for iPad */
+    }
+    .images, .forms {
+        max-width: 80%; /* adjust width for iPad */
+    }
+}
+
+/* Desktop 1680 x 1050 */
+
+@media only screen and (min-width: 1680) and (min-height: 1050) {
+    .images, .forms {
+        max-width: 40%; /* adjust the width for desktop */
+    }
+}
