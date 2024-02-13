@@ -12,21 +12,25 @@
     </script>
 </head>
 <body>
-    <section class="flex-container">
+    <section class="images-container">
         <div class="images">
             <img src="la-vie.jpeg" alt="painting of La Vie by Pablo Picasso">
             <img src="guitar-man.jpeg">
         </div>
     </section>
-<section class="forms">
-    <form action="other-site.html" method="get" name="myForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email">
-        <input type="button" value="Submit" onclick="submitForm()">
-    </form>
-</section>
+    <section class="forms">
+        <form action="other-site.html" method="get" name="myForm">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <input type="button" class="submit" value="Submit" onclick="submitForm()">
+        </form>
+    </section>
 
 </body>
 </html>
